@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+    background-color: black;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-image: url(../assets/Background-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}

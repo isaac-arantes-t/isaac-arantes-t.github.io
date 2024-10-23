@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Carrinho de Compras</title>
+    <style>
+        .produto-img {
+            width: 200px !important;
+            border-radius: 10px;
+        }   
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        #carrinho-container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+
+        .centro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: calc(100vh - 160px); /* Altura mínima para centralizar o conteúdo sem interferir no nav/footer */
+            padding: 20px;
+        }
+
+        .item-carrinho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .item-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .item-info img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .item-preco {
+            display: flex;
+            align-items: center;
+        }
+
+        .botoes-acoes {
+            display: flex;
+            gap: 10px;
+        }
+
+        .aumentar, .diminuir, .remover {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .aumentar, .diminuir {
+            color: #555;
+            border: 1px solid #555;
+        }
+
+        .aumentar:hover, .diminuir:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .remover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .remover:hover {
+            background-color: #c82333;
+        }
+
+        #finalizar-compra {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #finalizar-compra:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            .item-carrinho {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #finalizar-compra {
+                width: 100%;
+                text-align: center;
+            }
+
+            .botoes-acoes {
+                justify-content: flex-start;
+                gap: 5px;
+            }
+        }
+
+        footer, nav {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+
+        nav a, footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="centro">
+        <h1>Seu Carrinho de Compras</h1>
+        <div id="carrinho-container">
+            <!-- Os itens do carrinho serão exibidos aqui -->
+        </div>
+        <button id="finalizar-compra">Finalizar Compra</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const containerCarrinho = document.getElementById('carrinho-container');
+
+            function salvarCarrinho() {
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            }
+
+            function exibirCarrinho() {
+                containerCarrinho.innerHTML = '';
+                if (carrinho.length === 0) {
+                    containerCarrinho.innerHTML = '<p>O carrinho está vazio!</p>';
+                    return;
+                }
+
+                carrinho.forEach(produto => {
+                    const produtoDiv = document.createElement('div');
+                    produtoDiv.classList.add('item-carrinho');
+                    produtoDiv.innerHTML = `
+                        <h4>${produto.nome}</h4>
+                        <img src="${produto.imagem}" class="produto-img" alt="${produto.nome}">
+                        <p>Quantidade: 
+                            <button class="diminuir" data-id="${produto.id}">-</button>
+                            <span>${produto.quantidade}</span>
+                            <button class="aumentar" data-id="${produto.id}">+</button>
+                        </p>
+                        <button class="remover" data-id="${produto.id}">Remover</button>
+                    `;
+                    containerCarrinho.appendChild(produtoDiv);
+                });
+            }
+
+            function aumentarQuantidade(id) {
+                const produtoNoCarrinho = carrinho.find(produto => produto.id === id);
+                if (produtoNoCarrinho) {
+                    produtoNoCarrinho.quantidade += 1;
+                    salvarCarrinho();
+                    exibirCarrinho();
+                }
+            }
+
+            function diminuirQuantidade(id) {
+                const produtoNoCarrinho = carrinho.find(produto => produto.id === id);
+                if (produtoNoCarrinho && produtoNoCarrinho.quantidade > 1) {
+                    produtoNoCarrinho.quantidade -= 1;
+                    salvarCarrinho();
+                    exibirCarrinho();
+                } else if (produtoNoCarrinho && produtoNoCarrinho.quantidade === 1) {
+                    removerDoCarrinho(id);
+                }
+            }
+
+            function removerDoCarrinho(id) {
+                carrinho = carrinho.filter(produto => produto.id !== id);
+                salvarCarrinho();
+                exibirCarrinho();
+            }
+
+            containerCarrinho.addEventListener('click', function(event) {
+                const idProduto = parseInt(event.target.getAttribute('data-id'));
+                if (event.target.classList.contains('aumentar')) {
+                    aumentarQuantidade(idProduto);
+                } else if (event.target.classList.contains('diminuir')) {
+                    diminuirQuantidade(idProduto);
+                } else if (event.target.classList.contains('remover')) {
+                    removerDoCarrinho(idProduto);
+                }
+            });
+
+            exibirCarrinho();
+
+            const btnFinalizarCompra = document.getElementById('finalizar-compra');
+            btnFinalizarCompra.addEventListener('click', function() {
+                if (carrinho.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                } else {
+                    let mensagem = 'Olá, tenho interesse nos seguintes produtos:\n\n';
+                    carrinho.forEach(produto => {
+                        mensagem += `Produto: ${produto.nome}\n`;
+                        mensagem += `Quantidade: ${produto.quantidade}\n\n`;
+                    });
+
+                    var telefone = '554497268459';
+                    var url = 'https://wa.me/' + telefone + '?text=' + encodeURIComponent(mensagem);
+                    window.open(url, '_blank');
+                }
+            });
+        });
+    </script>
+    <script src="/bases.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

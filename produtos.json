@@ -1,0 +1,125 @@
+{
+  "produtos": 
+  [
+    {
+      "nome": "Espeto Original 18 cm 50 Und",
+      "id": 1,
+      "imagem": "../assets/produtos/Esp1850.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Espeto de 18 cm ideal para churrasco.",
+      "cod": "SPT-018-LMZ"
+    },
+    {
+      "nome": "Palito Original 25 cm 50 Und",
+      "id": 2,
+      "imagem": "../assets/produtos/Esp2550.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito",
+      "desc": "Palito de 25 cm multiuso.",
+      "cod": "PLT-025-MTZ"
+    },
+    {
+      "nome": "Palito Original 25 cm 100 Und",
+      "id": 3,
+      "imagem": "../assets/produtos/Esp25100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito",
+      "desc": "Palito de 25 cm, resistente e durável.",
+      "cod": "PLT-025-DSC"
+    },
+    {
+      "nome": "Pacote de Espeto Original 25 cm",
+      "id": 4,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Pacote com espetos de 25 cm.",
+      "cod": "PCT-025-STN"
+    },
+    {
+      "nome": "Pacote de Espeto Original 30 cm",
+      "id": 5,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Pacote com espetos de 30 cm.",
+      "cod": "PCT-030-ALC"
+    },
+    {
+      "nome": "Espeto Original 30 cm 100 Und",
+      "id": 6,
+      "imagem": "../assets/produtos/Esp30100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Espeto de 30 cm para churrasco.",
+      "cod": "SPT-030-CBF"
+    },
+    {
+      "nome": "Espeto Original 30 cm 50 Und",
+      "id": 7,
+      "imagem": "../assets/produtos/Esp3050.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Espeto resistente de 30 cm.",
+      "cod": "SPT-030-CMB"
+    },
+    {
+      "nome": "Espeto Original 40 cm",
+      "id": 8,
+      "imagem": "../assets/produtos/Esp40100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Espeto de 40 cm para grandes cortes.",
+      "cod": "SPT-040-DSG"
+    },
+    {
+      "nome": "Hashi de Bambu Original",
+      "id": 9,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "hashi",
+      "desc": "Hashi de bambu ecológico.",
+      "cod": "HSB-025-ORG"
+    },
+    {
+      "nome": "Palito Dental de Bambu Original 2000 Und",
+      "id": 10,
+      "imagem": "../assets/produtos/Cx122k.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Palito dental de bambu.",
+      "cod": "PLT-001-ORG"
+    },
+    {
+      "nome": "Palito Dental de Bambu Original 5000 Und",
+      "id": 11,
+      "imagem": "../assets/produtos/Cx1050k.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Palito dental ecológico.",
+      "cod": "PLT-002-ORG"
+    },
+    {
+      "nome": "Palito Dental de Bambu com Menta",
+      "id": 12,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Palito dental com menta refrescante.",
+      "cod": "PLT-003-MNT"
+    }
+  ]
+}
