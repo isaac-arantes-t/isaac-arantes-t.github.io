@@ -1,0 +1,125 @@
+{
+  "produtos": 
+  [
+    {
+      "nome": "Espeto Original 18 cm 50 Und",
+      "id": 1,
+      "imagem": "../assets/produtos/Esp1850.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 100 pc. de 50 un. (5.000un/cx)",
+      "cod": "1850"
+    },
+    {
+      "nome": "Palito Original 25 cm",
+      "id": 2,
+      "imagem": "../assets/produtos/Esp2550.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito",
+      "desc": "Caixa com 100 pc. de 50 un. (5.000un/cx)",
+      "cod": "2550"
+    },
+    {
+      "nome": "Palito Original 25 cm 100 Und",
+      "id": 3,
+      "imagem": "../assets/produtos/Esp25100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito",
+      "desc": "Caixa com 50 pc. de 100 un. (5.000un/cx)",
+      "cod": "25100"
+    },
+    {
+      "nome": "Pacote de Espeto Original 25 cm",
+      "id": 4,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 10 pc. de 1.000 un. (10.000un/cx)",
+      "cod": "251k"
+    },
+    {
+      "nome": "Pacote de Espeto Original 30 cm",
+      "id": 5,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 10 un. de 1.000 (10.000un/cx)",
+      "cod": "301k"
+    },
+    {
+      "nome": "Espeto Original 30 cm 100 Und",
+      "id": 6,
+      "imagem": "../assets/produtos/Esp30100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 10 un. de 1.000 (10.000un/cx)",
+      "cod": "30100"
+    },
+    {
+      "nome": "Espeto Original 30 cm 50 Und",
+      "id": 7,
+      "imagem": "../assets/produtos/Esp3050.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 10 un. de 1.000 (10.000un/cx)",
+      "cod": "3050"
+    },
+    {
+      "nome": "Espeto Original 40 cm",
+      "id": 8,
+      "imagem": "../assets/produtos/Esp40100.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "espeto",
+      "desc": "Caixa com 10 un. de 1.000 (10.000un/cx)",
+      "cod": "40100"
+    },
+    {
+      "nome": "Hashi de Bambu Original",
+      "id": 9,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "hashi",
+      "desc": "Pacote com 40 pares",
+      "cod": "HP40"
+    },
+    {
+      "nome": "Palito Dental de Bambu Original 2000 Und",
+      "id": 10,
+      "imagem": "../assets/produtos/Cx122k.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Cx master com 10 caixinhas c/ 5.000 un. - Total de 50.000 un.",
+      "cod": "1050k"
+    },
+    {
+      "nome": "Palito Dental de Bambu Original 5000 Und",
+      "id": 11,
+      "imagem": "../assets/produtos/Cx1050k.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Palito dental ecológico.",
+      "cod": "PLT-002-ORG"
+    },
+    {
+      "nome": "Palito Dental de Bambu com Menta",
+      "id": 12,
+      "imagem": "../assets/produtos/SemFoto.png",
+      "tipo": "page1",
+      "disp": true,
+      "categoria": "palito-dental",
+      "desc": "Palito dental com menta refrescante.",
+      "cod": "PLT-003-MNT"
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 /* Estilos Globais */
 body {
- background-color: white;
+    background-color: white;
 }
 
 /* Navbar */
@@ -321,5 +321,80 @@ a {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: black; /* Define a cor de fundo como preto */
+    background-color: black;
+}
+/* Navbar personalizada */
+.navbar-custom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar-custom .navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--white);
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito hover e animação de pulsação no clique */
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: var(--highlight-yellow);
+    color: var(--white);
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+    background-color: var(--dark-green);
+    color: var(--white);
+    animation: pulse 1s infinite; /* Animação de pulsação ao clique */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-custom .navbar-nav {
+        display: flex;
+        flex-direction: row; /* Garante que os itens fiquem em linha */
+        justify-content: center; /* Centraliza os itens */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        padding: 8px 12px; /* Ajuste do padding para caber melhor */
+        white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Ajusta ainda mais o tamanho da fonte em telas muito pequenas */
+        padding: 6px 10px; /* Reduz o padding para telas menores */
+    }
+}
+/* Rodapé */
+footer {
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
 }
