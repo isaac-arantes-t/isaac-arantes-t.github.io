@@ -1,0 +1,421 @@
+:root {
+    --primary-green: #21622e;
+    --light-green: #dfe280;
+    --highlight-yellow: #006d0077;
+    --white: #ffffff;
+    --dark-green: #034e0c;
+}
+
+/* Espaçamentos */
+section, .carousel-inner {
+    margin-bottom: 20px;
+}
+
+
+.menu-background {
+    background-image: url('/img/Bnovo.png');
+    background-color: #12391c;
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar, .dropdown-menu {
+    position: relative;
+    z-index: 1050; /* Padrão do Bootstrap para dropdowns */
+}
+
+.dropdown-menu {
+    background-color: #000000; /* Cor de fundo do menu */
+    border: none;          /* Remove a borda */
+}
+
+.dropdown-item {
+    color: #fff;           /* Cor do texto */
+}
+
+.dropdown-item:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+.static-dropdown {
+    top: 100%; /* Posiciona o menu diretamente abaixo do botão */
+    left: 0;   /* Alinha à esquerda do botão */
+    right: 0;  /* Alinha à direita do botão (opcional para largura completa) */
+    transform: none !important; /* Remove o deslocamento padrão do Bootstrap */
+    z-index: 1050; /* Garante que o menu apareça acima de outros elementos */
+}
+
+.logo {
+    position: absolute;
+    top: 1px;
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Navbar personalizada */
+.navbar-custom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 5%;
+}
+
+.navbar-custom .navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--white);
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito hover e animação de pulsação no clique */
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: var(--highlight-yellow);
+    color: var(--white);
+}
+
+.botao:hover {
+    background-color: var(--highlight-yellow);
+    color: var(--white);
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+    background-color: var(--dark-green);
+    color: var(--white);
+    animation: pulse 1s infinite; /* Animação de pulsação ao clique */
+}
+
+.search_menu {
+    font-size: large;
+}
+
+.botaoControle {
+    padding: 10px;
+    font-size: large;
+}
+
+/* Botão de WhatsApp fixo */
+.whatsapp-button {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    z-index: 100;
+    transition: transform 0.3s ease, margin-bottom 0.3s ease; /* Adiciona transições suaves */
+    margin-bottom: 0; /* Margem inicial */
+    transform-origin: bottom;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.2); /* Aumenta a imagem para 120% do tamanho original */
+    margin-top: 20px; /* Adiciona margem inferior quando em hover */
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-custom .navbar-nav {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; /* Centraliza os itens */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        padding: 8px 12px; /* Ajuste do padding para caber melhor */
+        white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+        
+    }
+    .carousel-caption-custom h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption-custom p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Ajusta ainda mais o tamanho da fonte em telas muito pequenas */
+        padding: 6px 10px; /* Reduz o padding para telas menores */
+    }
+    .menu-background {
+        height: 180px;
+        }
+
+    .logo {
+        width: 180px;
+        height: auto;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.carousel-inner {
+    width: 100%; /* Garante que o carrossel ocupe 100% da largura da viewport */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%; /* 100% da largura da tela */
+    height: auto; /* Para ajustar à altura da tela, opcional */
+    object-fit: cover; /* Cobre o espaço sem distorção */
+    overflow: hidden; /* Esconde qualquer excesso */
+}
+
+ /* Estilo para o texto do carrossel */
+ .carousel-caption-custom {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.carousel-caption-custom h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.carousel-caption-custom p {
+    font-size: 1.3rem;
+    color: black;
+}
+
+/* Estilização para os botões do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Círculo transparente preto */
+    border-radius: 50%; /* Para fazer o botão ser circular */
+    padding: 25px; /* Aumenta a área do botão */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto; /* Ajusta o tamanho para acomodar o círculo */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Torna o fundo mais escuro ao passar o mouse */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    
+    border-radius: 50%; /* Mantém o formato circular */
+}
+
+
+/* Destaque em verde escuro */
+.highlight {
+    color: #169a2e; /* Verde escuro */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521); /* Sombra branca média */
+}
+.highlightbranco {
+    color: #169a2e; /* Verde escuro */
+    font-weight: bold;
+}
+.white{
+    color: rgba(255, 255, 255, 0.795) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.89); /* Sombra branca média */
+}
+
+.sem_decor {
+    text-decoration: none;
+    color: inherit
+}
+
+.card {
+    color: black;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.revendedor {
+position: relative;
+background: url('/img/pessoas-negociando.png') no-repeat center center/cover;
+padding: 5rem 1rem;
+color: white;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 300px;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.revendedorForm {
+    background-color: #7f7d32;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+.revendedorFormlabel {
+    color: white;
+}
+
+/* Gradiente escuro no topo da imagem */
+.revendedor::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(107, 107, 107, 0.3));
+z-index: 1;
+}
+
+/* Conteúdo da seção */
+.revendedor .content {
+position: relative;
+z-index: 1;
+text-align: center;
+}
+
+.revendedor h2 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.revendedor p {
+font-size: 1.2rem;
+}
+
+/* Formulário responsivo */
+#contato {
+margin-top: 2rem;
+}
+
+#contato h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 1.5rem;
+}
+
+#contact-form .form-label {
+color: #ffffff;
+font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 10px;
+}
+
+#contact-form .btn {
+background-color: #1b2f14;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+transition: background-color 0.3s ease;
+}
+
+#contact-form .btn:hover {
+background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+.revendedor {
+    padding: 3rem 1rem;
+}
+
+.revendedor h2 {
+    font-size: 2rem;
+}
+
+.revendedor p {
+    font-size: 1rem;
+}
+
+.quem-somos {
+    background-color: #ffffff; /* Cor de fundo */
+}
+
+.quem-somos h2 {
+    color: #000000; /* Cor específica do título */
+    font-size: 2rem;
+}
+
+.quem-somos p {
+    color: black; /* Cor padrão dos parágrafos */
+    font-size: 1.1rem; /* Levemente maior para leitura confortável */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    margin-bottom: 1rem;
+}
+
+.quem-somos strong {
+    font-weight: bold; /* Destacar elementos importantes */
+}
+@media (max-width: 992px) {
+    .navbar-nav {
+        width: 100%; /* Faz com que o menu ocupe toda a largura */
+    }
+
+    .nav-item {
+        text-align: center; /* Centraliza os itens do menu em telas menores */
+    }
+
+    .search_menu {
+        justify-content: center; /* Centraliza os ícones de pesquisa e carrinho */
+        margin-top: 2px; /* Espaço acima dos ícones */
+    }
+}
+/* Estilo para o menu em colunas */
+.menu-columns {
+    display: grid!important;
+    grid-template-columns: repeat(3, 1fr)!important; /* 3 colunas de largura igual */
+    gap: 8px!important; /* Espaço entre as colunas */
+}
+}

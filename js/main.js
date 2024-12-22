@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Inicialização do carrinho
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    // Funções do carrinho
     function salvarCarrinho() {
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
     }
@@ -15,11 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
             carrinho.push({ ...produto, quantidade: 1 });
         }
         salvarCarrinho();
-        console.log('Carrinho:', carrinho);
         showPopup();
     }
 
-    // Funções de UI
     function showPopup() {
         let popup = document.getElementById('popup') || createPopup();
         popup.classList.add('show');
@@ -40,20 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
         return popup;
     }
 
-    // Carregamento e exibição de produtos
+    let produtosData = []; // Armazenará todos os produtos carregados
+
     function carregarProdutos() {
         fetch('produtos.json')
             .then(response => response.json())
             .then(data => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const categoriaFiltro = urlParams.get('categoria'); // Obtém o filtro da URL
-
-                const produtosFiltrados = categoriaFiltro
-                    ? data.produtos.filter(produto => produto.categoria === categoriaFiltro)
-                    : data.produtos; // Filtra se houver filtro de categoria na URL
-
-                exibirProdutos(produtosFiltrados);
-                setupFilterEvents(data.produtos);
+                produtosData = data.produtos; // Salvar os produtos
+                aplicarFiltros(); // Exibir produtos com base nos filtros
+                setupFilterEvents();
             })
             .catch(error => console.error('Erro ao carregar os produtos:', error));
     }
@@ -92,6 +83,26 @@ document.addEventListener("DOMContentLoaded", function() {
         return productCard;
     }
 
-    // Inicialização
+    // Filtros de categoria e busca
+    function aplicarFiltros() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoriaFiltro = urlParams.get('categoria'); // Filtro de categoria
+        const termoBusca = document.getElementById('searchbar').value.toLowerCase(); // Texto da barra de pesquisa
+
+        const produtosFiltrados = produtosData.filter(produto => {
+            const matchCategoria = categoriaFiltro ? produto.categoria === categoriaFiltro : true;
+            const matchBusca = produto.nome.toLowerCase().includes(termoBusca);
+            return matchCategoria && matchBusca;
+        });
+
+        exibirProdutos(produtosFiltrados);
+    }
+
+    // Evento de submissão da barra de pesquisa
+    document.querySelector('.search-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        aplicarFiltros();
+    });
+
     carregarProdutos();
 });

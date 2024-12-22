@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/Blogo.jpg" type="image/x-icon">
 </head>
 <body>
     <!-- Barra de Navegação -->
@@ -20,7 +20,7 @@
             <!-- Logo -->
             <div class="logo d-flex justify-content-start align-items-center">
                 <a class="navbar-brand logo" href="/index.html">
-                    <img src="../assets/logo.jpg" width="70" alt="logo-webracing">
+                    <img src="../img/logoBases.png" width="70" alt="logo-webracing">
                 </a>
             </div>
             
@@ -53,18 +53,11 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../">Página inicial</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Fale com a gente
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Instagram</a></li>
-                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
-                            </ul>
-                        </li>
+                        <li><a class="dropdown-item" href="/index.html">Início</a></li>
+                        <li><a class="dropdown-item" href="./pages/catalogo.html">Produtos</a></li>
+                        <li><a class="dropdown-item" href="/index.html#quemSomos">Quem somos</a></li>
+                        <li><a class="dropdown-item" href="https://wa.me/554497268459?text=Olá, acessei o site da Original Produtos e gostaria de mais informações sobre os produtos.">Contato</a></li>
+                        <li><a class="dropdown-item" href="/localizacao.html">Localização</a></li>
                     </ul>
                 </div>
             </div>
@@ -85,8 +78,9 @@
         
         <!-- Lista de Produtos -->
         <div id="page1" class="products-container row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4"></div>
-        <div id="produtos-list"></div>
-
+        <div>
+            <div id="produtos-list"></div>
+        </div>
 
         <div id="product-modal" class="product-modal">
             <div id="product-modal-content" class="product-modal-content">
@@ -155,11 +149,8 @@
         </script>
 
     <!-- Rodapé -->
-    <footer class="footer mt-auto py-3">
-        <div class="container text-center">
-            <span class="text-muted">© 2024 Web Racing. Todos os direitos reservados. Desenvolvido por 
-            <a href="https://www.instagram.com/agenciastroweb/" target="_blank">Agência Astro</a></span>
-        </div>
+    <footer>
+        <p>© <span id="currentYear"></span> Original Produtos. CNPJ: 22.629.773/0001-74<br>Av. das Torres, 6017 - Jardim Oriental, Maringá - PR<br>Todos os direitos reservados. Desenvolvido por Agência Astro</p>
     </footer>
 
     <!-- Scripts -->

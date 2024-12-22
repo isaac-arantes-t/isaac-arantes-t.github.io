@@ -18,7 +18,8 @@ body {
 
 .logo img {
     border-radius: 10%;
-    border: 1px solid rgb(252, 255, 250);
+    height: 80px;
+    width: auto;
 }
 
 .fa-bars, .fa-cart-shopping {
@@ -300,7 +301,7 @@ a {
     border-radius: 10px;
     overflow: hidden;
     transition: width 0.5s ease, height 0.5s ease;
-    z-index: 1000;
+    z-index: 800;
 }
 
 .close-btn {
