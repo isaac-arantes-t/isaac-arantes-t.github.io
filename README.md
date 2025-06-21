@@ -1,59 +1,55 @@
+<h3 align="center">- My Stats :</h3>
 
-<p align="center">
-  <img src="assets/logo.jpg" alt="Original Produtos" width="200" />
-</p>
+###
 
-<h1 align="center">Original Produtos</h1>
+<br clear="both">
 
-<p align="center">
-  Projeto do website da Original Produtos, especializada em palitos de churrasco, com foco em qualidade e tradição desde 1985.
-</p>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SchiavonNathan&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=en&hide_border=true&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SchiavonNathan&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=4&theme=tokyonight&hide_border=true&order=2" height="150" alt="languages graph"  />
+  <img src="https://streak-stats.demolab.com?user=SchiavonNathan&locale=en&mode=weekly&theme=tokyonight&hide_border=true&border_radius=5&order=3" height="150" alt="streak graph"  />
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue" alt="Status do Projeto" />
-  <img src="https://img.shields.io/badge/Styled%20with-Bootstrap-7952B3?logo=bootstrap" alt="Estilizado com Bootstrap" />
-  <img src="https://img.shields.io/badge/Styled%20with-CSS3-1572B6?logo=css3" alt="Estilizado com CSS3" />
-</p>
+###
 
----
+<div align="center">
+  <a href="https://www.linkedin.com/in/schiavonnathan/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+  </a>
+</div>
 
-## 📝 Descrição do Projeto
+###
 
-Esse projeto é o site oficial da **Original Produtos**, criado para exibir nossos produtos de palitos de churrasco com uma interface moderna e responsiva. O site conta com um carrossel de imagens, integração com WhatsApp para contato rápido e um layout otimizado para dispositivos móveis.
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app?username=SchiavonNathan&theme=radical&column=3&row=1&margin-w=8&margin-h=8&no-bg=true&no-frame=true&order=4" height="150" alt="trophy graph"  />
+</div>
 
----
+###
 
-## 🚀 Tecnologias Utilizadas
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=SchiavonNathan.SchiavonNathan&"  />
+</div>
 
-As principais tecnologias e ferramentas utilizadas no desenvolvimento do projeto são:
+###
 
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="50" height="50"/>
-  &nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
-</p>
+<h3 align="center">- Language and tools</h3>
 
-- **Bootstrap** - Biblioteca CSS para estilização e criação de componentes responsivos.
-- **CSS3** - Utilizado para estilizações adicionais e personalizações.
+###
 
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ts" height="60" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nodejs" height="60" alt="nodejs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nestjs" height="60" alt="nestjs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=react" height="60" alt="react logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=postgres" height="60" alt="postgresql logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=redis" height="60" alt="redis logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=rabbitmq" height="60" alt="rabbitmq logo"  />
+</div>
 
-## ⚙️ Funcionalidades
-
-- **Carrossel de Imagens:** Destaca produtos e diferenciais da marca com transições animadas.
-- **Botão de Contato no WhatsApp:** Acesso rápido ao WhatsApp, fixo no site para uma comunicação prática.
-- **Layout Responsivo:** Interface adaptável para dispositivos móveis e desktop.
-
----
-
-## 🚀 Como Executar o Projeto
-
-1. Clone este repositório:
-
-   ```bash
-    git clone https://github.com/agenciastro/originalprodutos.git
-   ```
-
-<p align="center">Feito com ❤️ por Original Produtos</p>
-```
-
----
+###
